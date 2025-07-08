@@ -22,7 +22,7 @@ describe("Login Page", () => {
   it("should show error on invalid email format", () => {
     cy.visit(`${baseUrl}/login`);
 
-    cy.get('input[name="email"]').type("invalid-email");
+    cy.get('input[name="email"]').type("invalid@user");
     cy.get('input[name="password"]').type("password123");
 
     cy.get('button[type="submit"]').click();
