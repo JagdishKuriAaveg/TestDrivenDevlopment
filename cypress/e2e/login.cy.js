@@ -5,7 +5,7 @@ describe("Login Page", () => {
     cy.visit(`${baseUrl}/login`);
     cy.get('label[name="Email"]').should("exist");
     cy.get('input[name="email"]').should("exist");
-     cy.get('label[name="Password"]').should("exist");
+    cy.get('label[name="Password"]').should("exist");
     cy.get('input[name="password"]').should("exist");
     cy.get('button[type="submit"]').should("contain", "Login");
   });
