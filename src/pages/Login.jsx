@@ -56,7 +56,7 @@ const Login = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block mb-1" htmlFor="email">
-            Email2
+            Email
           </label>
           <input
             type="email"
