@@ -3,9 +3,9 @@ describe("Login Page", () => {
 
   it("should render login form", () => {
     cy.visit(`${baseUrl}/login`);
-    cy.get('label[name="email"]').should("exist");
+    cy.get('label[name="Email"]').should("exist");
     cy.get('input[name="email"]').should("exist");
-     cy.get('label[name="password"]').should("exist");
+     cy.get('label[name="Password"]').should("exist");
     cy.get('input[name="password"]').should("exist");
     cy.get('button[type="submit"]').should("contain", "Login");
   });
