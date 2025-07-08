@@ -67,7 +67,9 @@ const Login = () => {
             className="w-full border rounded px-3 py-2"
           />
           {errors.email && (
-            <p className="text-red-500 text-sm">{errors.email}</p>
+            <span role="alert" className="text-red-500 text-sm">
+              {errors.email}
+            </span>
           )}
         </div>
 
