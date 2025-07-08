@@ -1,31 +1,22 @@
-name: Run Cypress Tests
+name: E2E Tests
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+on: [push, pull_request]
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ⬇️ Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: ⚙️ Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: 📦 Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      - name: 🌐 Start Vite Dev Server in Background
-        run: |
-          npm run dev &
-          sleep 10
-
-      - name: 🧪 Run Cypress Tests
-        run: npx cypress run
+      - name: Run Cypress tests
+        run: npx start-server-and-test dev http://localhost:5173 "npx cypress run"
