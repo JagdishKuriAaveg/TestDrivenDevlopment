@@ -50,7 +50,7 @@ const Login = () => {
 
   return (
     <div className="max-w-md mx-auto mt-20 p-6 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+      <h2 className="text-2xl font-bold mb-4 text-center">Login12</h2>
       {errors.form && <div className="text-red-500 mb-2">{errors.form}</div>}
 
       <form onSubmit={handleSubmit}>
