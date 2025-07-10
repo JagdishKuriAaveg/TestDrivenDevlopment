@@ -75,7 +75,7 @@ const Login = () => {
 
         <div className="mb-4">
           <label className="block mb-1" htmlFor="password">
-            Password2
+            Password
           </label>
           <input
             type="password"
